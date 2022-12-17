@@ -1,0 +1,93 @@
+### Register a new User
+POST http://localhost:8090/auth/register
+content-type: application/json
+
+{
+    "username": "John",
+    "email": "John@gmail.com",
+    "password": "John",
+    "bio": "Backend Engineer",
+    "location": "Jos",
+    "profilepicture": "",
+    "followers": [],
+    "followings": []
+}
+
+   "start:dev": "cross-env NODE_ENV=development nest start --watch",
+
+
+### Login a User
+POST http://localhost:8090/auth/login
+content-type: application/json
+
+{
+    "email": "John@gmail.com",
+    "password": "John"
+}
+
+
+
+###Get the current signed in User
+GET http://localhost:8090/auth/currentuser
+
+
+
+### Sign Out
+POST http://localhost:8090/auth/signout
+
+
+
+### Find a particular User
+GET http://localhost:8090/user/3
+
+
+### Find User with a given Username
+GET http://localhost:8090/user?username=Ifee
+
+
+### Update a particular User
+PATCH http://localhost:8090/user/3
+content-type: application/json
+
+{
+    "username": "John"
+}
+
+### Delete a particular User
+DELETE http://localhost:8090/user/3
+
+### Follow a User
+
+
+
+### Unfollow a User
+
+
+
+### Create a New Post
+POST http://localhost:8090/posts/newpost
+content-type: application/json
+
+{
+    "description": "Python Docs",
+    "image": "",
+    "likes": []
+}
+
+
+### Find a Post
+GET http://localhost:8090/posts/1
+
+
+
+### Delete a Post
+DELETE http://localhost:8090/posts/2
+
+
+### Follow a User
+PUT http://localhost:8090/user/3
+content-type: application/json
+
+{
+    "username": "Killshot"
+}
